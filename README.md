@@ -50,6 +50,10 @@ See if it works! If it does, play around with the javascript and see what fun ma
 
 Let's try a few more things. 
 
+Here's the setup to a function using arguments. This should take an 'argument' and add it to a div.
+
+We're using a global variable 'myVar' to store a bunch of words. Then, we're getting a feild in our HTML with the ID of `output`, and displaying the text there.
+
 ```
 var myVar = 0; 
 
@@ -59,13 +63,37 @@ function myFunction(thing) {
   
   document.getElementById('output').innerHTML = myVar;
 }
-```
-
-HTML:
 
 ```
-<button onclick="myFunction('i really love')">Add the text "i really love"</button>
-<button onclick="myFunction('writing goddamn code!!!")>Add the text "writing some goddamn code"</button>
+
+Here's what we'll need to add to our HTML:
+
+```
+<button onclick="myFunction('boots and ')">Add the text "boots and "</button>
+<button onclick="myFunction('cats and ')>Add the text "cats and "</button>
+
+<div id="output"></div>
+
+```
+
+Here's the setup for our second function! This one looks in our HTML for a user input value, and then logs something in the console
+
+
+function myLoop() {
+  var loopAmt = document.getElementById('loopAmt').value;
+  
+  while (loopAmt > 0) {
+    console.log("Loop amount = " + loopAmt);
+  }
+}
+
+
+Here's what we should add to our HTML:
+
+```
+
+<input type="number" id="loopAmt"> 
+<button onclick="myLoop()">Loop through the loop amount!</button>
 ```
 
 
